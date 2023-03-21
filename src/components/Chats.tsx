@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+// @ts-ignore
 import {ChatEngine} from 'react-chat-engine';
 import {auth} from "../firebase";
 import {useNavigate} from "react-router-dom";
@@ -9,6 +10,7 @@ import preloader from '../assets/loading.svg'
 
 const Chats = () => {
 
+    // @ts-ignore
     const { user } = useAuth()
     const [loading, setLoading] = useState(true);
 
