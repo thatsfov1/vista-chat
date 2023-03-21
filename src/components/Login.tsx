@@ -9,6 +9,7 @@ const Login = () => {
   return (
     <div className='absolute top-0 bottom-0 left-0 right-0 bg-cyan-600 '>
       <div className="relative px-8 pt-8 pb-16 text-center bg-white rounded-2xl w-[420px] top-[calc(50%-144px)] left-[calc(50%-210px)]">
+          <div className='text-2xl font-medium pb-4'>Welcome!</div>
           <div onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())} className="cursor-pointer border border-b-gray-200 rounded-lg flex p-3 justify-center items-center gap-0.5">
                 <FcGoogle/>
               Log in with Google
