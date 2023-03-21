@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {useNavigate} from "react-router-dom";
 import {auth} from "../firebase";
-import preloader from "../assets/loading.svg";
 
 
 const AuthContext = React.createContext({})
@@ -26,9 +25,7 @@ export const AuthProvider = ({children}:{children:React.ReactNode}) => {
 
     return (
         <AuthContext.Provider value={value}>
-            {loading ? <div className='min-w-full min-h-[100vh] flex justify-center items-center'>
-                <img alt='Loading...' src={preloader}/>
-            </div> : children}
+            {!loading && children}
             </AuthContext.Provider>
     )
 
